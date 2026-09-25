@@ -2,6 +2,27 @@
 
 HeavyLoad is a machine learning project aimed at predicting the transaction prices of heavy equipment and machinery based on their specifications and operational history. The dataset contains various technical, operational, and transactional parameters for each asset.
 
+## How it Works
+
+The goal of this project is to accurately predict the selling price (`TargetValue`) of heavy equipment using machine learning. By analyzing historical transactions, the project identifies key drivers of equipment value—such as its age, usage (e.g., operational hours), location, and specific technical features. 
+
+This predictive capability can empower businesses to make informed pricing, purchasing, and sales decisions. The model achieves this by learning patterns from the training dataset and applying them to predict prices for new, unseen assets.
+
+## Project Pipeline
+
+The machine learning workflow implemented in the Jupyter Notebook follows these key steps:
+
+1. **Import Libraries & Load Dataset**: Setting up the environment and loading training/testing data.
+2. **Exploratory Data Analysis (EDA)**: Understanding data distributions, missing values, and target variable skewness (applying logarithmic transformation to stabilize variance).
+3. **Data Preprocessing & Feature Engineering**: Cleaning data, handling missing values, and extracting new meaningful features from the existing parameters.
+4. **Train-Validation Split**: Dividing the training data to evaluate model performance locally.
+5. **Categorical Encoding & Scaling**: Applying Target Encoding and Ordinal Encoding for categorical variables, and scaling numerical features.
+6. **Hyperparameter Tuning**: Optimizing model parameters to achieve the best possible performance.
+7. **Feature Importance Analysis**: Identifying which specifications and features most heavily influence the equipment's price.
+8. **Model Training & Validation**: Training various advanced regression models (e.g., Linear Regression, Ridge, CatBoost, XGBoost, LightGBM, and Stacking Regressors).
+9. **Performance Evaluation & Comparison**: Comparing models using metrics like Root Mean Squared Logarithmic Error (RMSLE) and R-squared.
+10. **Final Submission**: Selecting the best performing model and generating predictions for the test dataset.
+
 ## Project Files
 
 - **`train.csv`**: The training dataset, which includes the asset features and the target variable (`TargetValue`).
